@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+       
+        let result1 = 10 + 10 + "10"; //ответ 2010. 10+10=20 числа 20+"10"="2010" произошло склеивание тк "10" это строка
+        console.log(result1); // вывод результата переменной в консоль
+
+        let result2 = 10 + "10" + 10; // ответ 101010. 10+"10"="1010" склеивание. "1010" + 10 = "101010" тк число 10 превращается в строку
+        console.log(result2);
+
+        let result3 = 10 + 10 + +"10"; /* ответ 30. 10+10=20, +"10" становится числом 10. 20+10=30 */
+        console.log(result3);
+
+        let result4 = 10 / -""; // унарный минус будет преображать "" в число и она становится 0. 10 / 0 = Infinity
+        console.log(result4);
+
+        let result5 = 10 / +"2,5"; //унарный плюс будет преобразовывать "2,5" в число. Из-за , "2,5" становится NaN. 10 / Nan = NaN
+        console.log(result5);
+    </script>
+    
+</body>
+</html>
